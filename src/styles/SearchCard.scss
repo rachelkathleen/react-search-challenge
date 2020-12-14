@@ -1,0 +1,62 @@
+@import 'globals';
+
+.search-card {
+  align-content: center;
+  display: flex;
+  align-items: center;
+
+  &--content {
+    border: 1px solid $light-gray;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px $light-gray;
+    overflow: hidden;
+    height: 200px;
+    width: 200px;
+  }
+
+  &--avatar {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  &--details {
+      position: absolute;
+      width: 100%;
+      bottom: 0px;
+      border-radius: inherit;
+      overflow: hidden;
+
+      &_two {
+          margin: 8px;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          position: relative;
+      }
+
+      &_three {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      &--handle {
+          display: flex;
+          margin-bottom: 4px;
+      }
+
+      &--age {
+          display: flex;
+          justify-content: space-between;
+      }
+
+      &--photo-count {
+          align-self: flex-end;
+          padding-right: 4px;
+      }
+  }
+}

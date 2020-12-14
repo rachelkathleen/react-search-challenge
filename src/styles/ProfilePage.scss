@@ -1,0 +1,92 @@
+@import 'globals';
+
+.profile-page {
+  &--container {
+    align-items: flex-start;
+
+    box-shadow: 2px 5px 8px $light-gray;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 75%;
+
+    .section {
+      border-bottom: 1px solid $light-gray;
+      display: flex;
+      margin: 20px;
+      padding-bottom: 20px;
+      width: 90%;
+
+      .profile-image {
+        align-self: flex-start;
+        width: 204px;
+        height: 204px;
+
+        img {
+          border-radius: 8px;
+          transition: opacity 0.3s cubic-bezier(0.1, 0.25, 0.75, 0.9) 0s;
+        }
+      }
+
+      .profile-images {
+        display: flex;
+  
+        &--photo {
+          border-radius: 12px;
+          width: 150px;
+          height: 150px;
+          padding: 0 7px;
+          transition: opacity 0.3s cubic-bezier(0.1, 0.25, 0.75, 0.9) 0s;
+        }
+      }
+
+      .profile-info {
+        box-sizing: border-box;
+        flex-direction: column;
+        display: flex;
+        padding-left: 24px;
+
+        h2 {
+          font-family: 'Reckless Neue', 'Times New Roman', Times, serif;
+          font-size: 36px;
+          font-weight: 700;
+          letter-spacing: -1px;
+          margin: 0 0 10px;
+        }
+
+        &--name {
+          box-sizing: border-box;
+          padding-bottom: 4px;
+        }
+
+        &--details {
+          box-sizing: border-box;
+          color: $dark-gray;
+          font-family: inherit;
+          font-size: 14px;
+          line-height: 20px;
+          padding-bottom: 5px;
+        }
+      }
+    }
+
+    .profile-summary {
+      h4 {
+        margin: 0 0 10px;
+      }
+      &--headline {
+        font-family: 'Reckless Neue', 'Times New Roman', Times, serif;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: -1px;
+      }
+
+      &--description {
+        color: $dark-gray;
+        font-family: inherit;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}

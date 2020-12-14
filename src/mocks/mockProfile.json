@@ -1,0 +1,86 @@
+{
+    "id": 50040631,
+    "organization_id": "GA803",
+    "url": "https:\/\/www.petfinder.com\/dog\/hunter-50040631\/ga\/hartwell\/hart-co-animal-rescue-inc-ga803\/?referrer_id=34ffe14c-58d9-4b81-ada1-c2849be8f41c",
+    "type": "Dog",
+    "species": "Dog",
+    "breeds": {
+        "primary": "Chihuahua",
+        "secondary": null,
+        "mixed": false,
+        "unknown": false
+    },
+    "colors": {
+        "primary": null,
+        "secondary": null,
+        "tertiary": null
+    },
+    "age": "Senior",
+    "gender": "Male",
+    "size": "Small",
+    "coat": "Short",
+    "attributes": {
+        "spayed_neutered": true,
+        "house_trained": true,
+        "declawed": null,
+        "special_needs": false,
+        "shots_current": true
+    },
+    "environment": {
+        "children": null,
+        "dogs": true,
+        "cats": true
+    },
+    "tags": [],
+    "name": "Hunter",
+    "description": "Hunter was found in the lake stuck in the mud.... terrible shape, teeth horrific, and so so hungry. But he...",
+    "organization_animal_id": null,
+    "photos": [
+        {
+            "small": "https:\/\/dl5zpyw5k3jeb.cloudfront.net\/photos\/pets\/50040631\/1\/?bust=1607915153\u0026width=100",
+            "medium": "https:\/\/dl5zpyw5k3jeb.cloudfront.net\/photos\/pets\/50040631\/1\/?bust=1607915153\u0026width=300",
+            "large": "https:\/\/dl5zpyw5k3jeb.cloudfront.net\/photos\/pets\/50040631\/1\/?bust=1607915153\u0026width=600",
+            "full": "https:\/\/dl5zpyw5k3jeb.cloudfront.net\/photos\/pets\/50040631\/1\/?bust=1607915153"
+        },
+        {
+            "small": "https:\/\/dl5zpyw5k3jeb.cloudfront.net\/photos\/pets\/50040631\/2\/?bust=1607915158\u0026width=100",
+            "medium": "https:\/\/dl5zpyw5k3jeb.cloudfront.net\/photos\/pets\/50040631\/2\/?bust=1607915158\u0026width=300",
+            "large": "https:\/\/dl5zpyw5k3jeb.cloudfront.net\/photos\/pets\/50040631\/2\/?bust=1607915158\u0026width=600",
+            "full": "https:\/\/dl5zpyw5k3jeb.cloudfront.net\/photos\/pets\/50040631\/2\/?bust=1607915158"
+        }
+    ],
+    "primary_photo_cropped": {
+        "small": "https:\/\/dl5zpyw5k3jeb.cloudfront.net\/photos\/pets\/50040631\/1\/?bust=1607915153\u0026width=300",
+        "medium": "https:\/\/dl5zpyw5k3jeb.cloudfront.net\/photos\/pets\/50040631\/1\/?bust=1607915153\u0026width=450",
+        "large": "https:\/\/dl5zpyw5k3jeb.cloudfront.net\/photos\/pets\/50040631\/1\/?bust=1607915153\u0026width=600",
+        "full": "https:\/\/dl5zpyw5k3jeb.cloudfront.net\/photos\/pets\/50040631\/1\/?bust=1607915153"
+    },
+    "videos": [],
+    "status": "adoptable",
+    "status_changed_at": "2020-12-14T03:08:37+0000",
+    "published_at": "2020-12-14T03:08:37+0000",
+    "distance": null,
+    "contact": {
+        "email": "hcarapplications@gmail.com",
+        "phone": null,
+        "address": {
+            "address1": "P.O. Box 45",
+            "address2": null,
+            "city": "Hartwell",
+            "state": "GA",
+            "postcode": "30643",
+            "country": "US"
+        }
+    },
+    "_links": {
+        "self": {
+            "href": "\/v2\/animals\/50040631"
+        },
+        "type": {
+            "href": "\/v2\/types\/dog"
+        },
+        "organization": {
+            "href": "\/v2\/organizations\/ga803"
+        }
+    }
+}

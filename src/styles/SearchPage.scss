@@ -1,0 +1,20 @@
+@import 'globals';
+
+.search-page {
+  margin: 24px;
+
+  &--buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &--content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 16px;
+  }
+
+  &--button {
+    width: 22;
+  }
+}
