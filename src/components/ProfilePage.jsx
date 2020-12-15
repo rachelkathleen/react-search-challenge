@@ -20,10 +20,15 @@ class ProfilePage extends React.Component {
   }
 
   renderTopSection(profile) {
+    const { contact, name, species, status, url } = profile;
+    const { city, state } = contact.address;
+    const ariaLabel = `${name} ${status} ${species} in ${city}, ${state}`;
     return (
       <section className="section">
         <div className="profile-image">
-          <FittedImage {...this.getPrimaryImageProps(profile)} />
+          <a aria-label={ariaLabel} href={profile.url} target="blank">
+            <FittedImage {...this.getPrimaryImageProps(profile)} />
+          </a>
         </div>
         {this.renderTopRight(profile)}
       </section>
@@ -57,7 +62,7 @@ class ProfilePage extends React.Component {
         <section className="section">
           <div className="profile-summary">
             <div className="profile-summary--headline">
-              <h4>Their summary</h4>
+              <h3>Their summary</h3>
             </div>
             <div className="profile-summary--description">
               <p>{profile.description}</p>
@@ -79,7 +84,9 @@ class ProfilePage extends React.Component {
         <section className="section">
           <div className="profile-images"></div>
           {photos.map((photo, index) => (
-            <FittedImage {...this.getImageProps(photo, index)} />
+            <a href={photo.full} target="blank">
+              <FittedImage {...this.getImageProps(photo, index)} />
+            </a>
           ))}
         </section>
       );
@@ -92,6 +99,7 @@ class ProfilePage extends React.Component {
     const { name, photos } = profile;
 
     return {
+      ariaDescribedby: 'something',
       alt: `Photo of ${name}`,
       fit: 'cover',
       src: photos[0].medium,
@@ -100,7 +108,7 @@ class ProfilePage extends React.Component {
 
   getImageProps(photo, index) {
     return {
-      alt: `image ${index + 1}`,
+      alt: `${index + 1}`,
       className: 'profile-images--photo',
       fit: 'cover',
       key: index,
