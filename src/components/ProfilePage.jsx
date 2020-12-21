@@ -5,17 +5,24 @@ import '../styles/ProfilePage.scss';
 
 class ProfilePage extends React.Component {
   static contextType = ProfileContext;
+  handleSortAscending = () => {
+    this.context.dispatch({ type: 'ascending' });
+  };
 
   render() {
+    return <main className="profile-page--container">{this.findProfile()}</main>;
+  }
+
+  renderProfileInfo() {
     const id = this.props.match.params.id;
     const profile = this.context.profiles.find((profile) => profile.id === parseInt(id));
 
     return (
-      <main className="profile-page--container">
+      <>
         {this.renderTopSection(profile)}
         {this.renderSummarySection(profile)}
         {this.renderAdditionalPhotos(profile)}
-      </main>
+      </>
     );
   }
 
@@ -115,6 +122,22 @@ class ProfilePage extends React.Component {
       src: photo.small,
     };
   }
-}
 
+  findProfile() {
+    const id = this.props.match.params.id;
+    const profile = this.context.profiles.find((profile) => profile.id === parseInt(id));
+    let content;
+
+    if (profile) {
+      content = this.renderProfileInfo();
+    } else
+      content = (
+        <section className="section">
+          <h1>Loading...</h1>
+        </section>
+      );
+
+    return content;
+  }
+}
 export default ProfilePage;
