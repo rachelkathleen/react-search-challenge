@@ -13,6 +13,7 @@
     .section {
       border-bottom: 1px solid $light-gray;
       display: flex;
+      flex-wrap: wrap;
       margin: 20px;
       padding-bottom: 20px;
       width: 90%;
@@ -38,6 +39,7 @@
 
       .profile-images {
         display: flex;
+        flex-wrap: wrap;
 
         &--photo {
           border-radius: 12px;

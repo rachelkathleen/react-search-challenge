@@ -1,0 +1,17 @@
+@import 'globals';
+
+.error {
+  &--container {
+    align-items: flex;
+    justify-content: center;
+    border-bottom: none;
+
+    h1 {
+      font-family: 'Reckless Neue', 'Times New Roman', Times, serif;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin: 0 0 10px;
+    }
+  }
+}

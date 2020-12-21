@@ -37,7 +37,6 @@ class SearchPage extends React.Component {
 
   renderProfiles() {
     const { profiles = [] } = this.context;
-    console.log(profiles);
     return (
       <div className="search-page--content">
         {profiles.map((profile) => (
@@ -49,6 +48,24 @@ class SearchPage extends React.Component {
     );
   }
 
+  renderContent() {
+    const { profiles = [] } = this.context;
+    let content;
+
+    if (profiles.length === 0) {
+      content = <div className="search-page--content">Loading...</div>;
+    } else if (profiles.length > 0) {
+      content = (
+        <div className="search-page--content">
+          {profiles.map((profile) => (
+            <Link key={profile.id} to={`/profiles/${profile.id}`}>
+              <SearchCard {...this.getSearchCardProps(profile)} />
+            </Link>
+          ))}
+        </div>
+      );
+    }
+  }
   getSearchCardProps(profile) {
     const { age, name, id, location, photos } = profile;
 

@@ -1,5 +1,6 @@
 import { ProfileContext } from './ProfilesContextProvider';
 import React from 'react';
+import Error from './Error';
 import FittedImage from 'react-fitted-image';
 import '../styles/ProfilePage.scss';
 
@@ -125,17 +126,18 @@ class ProfilePage extends React.Component {
 
   findProfile() {
     const id = this.props.match.params.id;
-    const profile = this.context.profiles.find((profile) => profile.id === parseInt(id));
+    const profiles = this.context.profiles;
+    const profile = profiles.find((profile) => profile.id === parseInt(id));
     let content;
+    console.log(profile);
+    console.log(profiles);
+    console.log(this.context);
 
     if (profile) {
       content = this.renderProfileInfo();
-    } else
-      content = (
-        <section className="section">
-          <h1>Loading...</h1>
-        </section>
-      );
+    } else {
+      content = <Error />;
+    }
 
     return content;
   }
